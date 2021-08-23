@@ -10,10 +10,22 @@ Note2: For testing any new data of same csv format,you can see the guide at the 
 
 **Deployment**
 
-There are so many ways of deployment, It mainly depends, whether your ML model has been integrate to some website (eg. you can use flask to direct route to check predictions for some data on our model, and maybe you have data coming fro different sources in web. there can be lot of api's involved). It also depends which cloud platform(GCP,AWS or Heroku) you have hosted your app or maybe model directly(eg. You can crete REST API using FAST API and deploy on Heroku). I am not going into details, but i would write briefly about deploying your model on GCP. 
+Attaching a sample main.py to show how to create rest api to get predictions on the new data (its not deployable, because the data is not stored from colab notebook). However it will look like that.
 
-Steps:
-1) first export our trained model from our finalgrove file to pickle using.
-import pickle
-with open('model.pkl', 'wb') as model_file:
-  pickle.dump(classifier, model_file)
+**step1: first install the required libraries**
+$ pip install fastapi uvicorn
+
+Install Heroku
+$sudo snap install --classic heroku
+
+**Step2: Create our ML model, model.py:**
+write the code which we have written in our colab file and save the model as pkl file.
+
+**Step 3: Creating a REST API using FAST API**
+For this I have written sample file main.py.
+
+At last, we can run the app using
+$ uvicorn app:app --reload
+
+
+
