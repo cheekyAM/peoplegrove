@@ -10,4 +10,10 @@ Note2: For testing any new data of same csv format,you can see the guide at the 
 
 **Deployment**
 
-There are so many ways of deployment, It mainly depends, whether your ML model has been integrate to some website (eg. you can use flask to direct route to check predictions for some data on our model, and maybe you have data coming fro different sources in web. there can be lot of api's involved). It also depends which cloud platform you have hosted your app or maybe model directly. i am not going into details, but i would write briefly about deploying your model on GCP. 
+There are so many ways of deployment, It mainly depends, whether your ML model has been integrate to some website (eg. you can use flask to direct route to check predictions for some data on our model, and maybe you have data coming fro different sources in web. there can be lot of api's involved). It also depends which cloud platform(GCP,AWS or Heroku) you have hosted your app or maybe model directly(eg. You can crete REST API using FAST API and deploy on Heroku). I am not going into details, but i would write briefly about deploying your model on GCP. 
+
+Steps:
+1) first export our trained model from our finalgrove file to pickle using.
+import pickle
+with open('model.pkl', 'wb') as model_file:
+  pickle.dump(classifier, model_file)
