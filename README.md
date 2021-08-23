@@ -27,5 +27,6 @@ For this I have written sample file main.py.
 At last, we can run the app using
 $ uvicorn app:app --reload
 
+Note: If you want full working deployment, please let me know. As from problem file itseems you require colab file of experiment and just sample on how to deploy and interation through apis.
 
 
